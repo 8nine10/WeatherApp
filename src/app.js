@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
-const app = express();
-const port = 8000;
+const dotenv = require('dotenv')
 
+
+const app = express();
+dotenv.config()
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -31,7 +33,8 @@ app.get("/weather", (req, res) => {
 app.get("*", (req, res) => {
     res.render("404error");
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log("hosting");
 })
