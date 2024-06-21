@@ -124,9 +124,15 @@ body {
 }
 
 .main_header_right figure img {
-  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.7));
 }
 
+.carousel-img {
+  height: 400px; /* Set a fixed height */
+  width: 100%; /* Ensure the image takes full width */
+  object-fit: cover; /* Crop and scale the image to fit the container */
+  border-radius: 15px; /* Add rounded corners */
+}
 /* weather page style */
 /* temp input fields style code */
 
@@ -170,74 +176,64 @@ body {
 }
 
 /* temp detials show here */
-
 .tempInfo {
-  width: 40rem;
+  background-color: var(--main-bg);
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
   margin: auto;
-  min-height: 20rem;
-  background-color: #323544;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .top_layer {
-  width: 100%;
-  height: 20%;
-  font-size: 2rem;
-  background-color: #2d303d;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 1rem;
-  padding: 2rem 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .top_layer p {
-  color: #fff;
-  font-weight: 300;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 .main_layer {
-  width: 100%;
-  height: 80%;
+  padding: 20px;
+}
+
+#city_name {
+  font-size: 3.5rem;
+  margin: 10px 0;
+}
+
+.middle_layer {
   display: flex;
-  background-color: #2d303d;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.main_layer #city_name {
-  padding: 2rem 0;
-  color: #bfc1c8;
-  font-weight: 300;
-  font-size: 3rem;
+#temp {
+  font-size: 3.5rem;
+  margin: 0;
 }
 
-.main_layer .middle_layer {
-  display: flex;
-  justify-content: space-around;
-  color: #fff;
+#temp_stat i {
+  font-size: 5.5rem;
 }
 
-.main_layer .middle_layer p,
-.main_layer .middle_layer .fa {
-  font-size: 4rem;
-  font-weight: 900;
+@media (max-width: 576px) {
+  .top_layer {
+      flex-direction: column;
+      align-items: center;
+  }
+  .middle_layer {
+      flex-direction: column;
+  }
 }
 
-.fa {
-  color: #009ad8;
-}
-
-sup {
-  font-size: 5rem;
-  margin-top: -2rem;
-}
-
-.data_hide {
-  visibility: hidden;
-  transition: all 0.3s linear;
-}
 
 /* 404 error page */
 
